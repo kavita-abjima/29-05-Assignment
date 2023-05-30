@@ -72,7 +72,11 @@ namespace WebApiDbMigrations.Controllers
                 return BadRequest();
             }
             _context.Entry(employee).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
+           
+                await _context.SaveChangesAsync();
+            
+               // return NotFound();
+            
             return NoContent();
 
             //    var updateEmp1 = _mapper.Map<Employee>(_context.Entry(employee).State);
